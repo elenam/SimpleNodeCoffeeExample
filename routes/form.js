@@ -5,7 +5,7 @@
   };
 
   exports.postResponse = function(req, res) {
-    return res.send('Your result is here');
+    return res.send('You said ' + req.body.text);
   };
 
 }).call(this);
