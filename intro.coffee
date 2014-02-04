@@ -30,6 +30,9 @@ absValueToo = (x) ->
 
 allAbsValue = (arr) -> absValue item for item in arr
 
+onlyPositive = (arr) -> elem for elem in arr when elem > 0
+
+person = (name, city) -> {name: name, city: city}
 
 module.exports.add2 = add2
 module.exports.add = add
@@ -37,3 +40,5 @@ module.exports.absValue = absValue
 module.exports.withinRange = withinRange
 module.exports.absValueToo = absValueToo
 module.exports.allAbsValue = allAbsValue
+module.exports.person = person
+module.exports.onlyPositive = onlyPositive

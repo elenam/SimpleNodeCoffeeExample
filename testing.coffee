@@ -9,6 +9,8 @@ absValue = require('./intro').absValue
 absValueToo = require('./intro').absValueToo
 withinRange = require('./intro').withinRange
 allAbsValue = require('./intro').allAbsValue
+person = require('./intro').person
+onlyPositive = require('./intro').onlyPositive
 
 describe "testing add2", ->
   it "should return 42", ->
@@ -55,4 +57,12 @@ describe "testing absValueToo", ->
 describe "testing allAbsValue", ->
   it "should return [1, 2, 0, 3.5]", ->
     assert.deepEqual(allAbsValue([-1, 2, 0, -3.5]), [1, 2, 0, 3.5])
+
+describe "testing onlyPositive", ->
+  it "should return [2, 3.5]", ->
+    assert.deepEqual(onlyPositive([-1, 2, 0, 3.5]), [2, 3.5])
+
+describe "Testing person object", ->
+  it "should return name: mary, city: morris", ->
+    assert.deepEqual(person('Mary','Morris'), {name: 'Mary', city: 'Morris'})
 
