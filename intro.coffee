@@ -34,6 +34,21 @@ onlyPositive = (arr) -> elem for elem in arr when elem > 0
 
 person = (name, city) -> {name: name, city: city}
 
+sumArray = (arr) ->
+  sum = 0
+  sum += number for number in arr
+  sum
+
+sumPartArray = (arr, lower, upper) ->
+  sum = 0
+  sum += number for number in arr[lower..upper]
+  sum
+
+sumAll = (item, rest...) ->
+  sum = item
+  sum += number for number in rest
+  sum
+
 module.exports.add2 = add2
 module.exports.add = add
 module.exports.absValue = absValue
@@ -42,3 +57,6 @@ module.exports.absValueToo = absValueToo
 module.exports.allAbsValue = allAbsValue
 module.exports.person = person
 module.exports.onlyPositive = onlyPositive
+module.exports.sumArray = sumArray
+module.exports.sumPartArray = sumPartArray
+module.exports.sumAll = sumAll

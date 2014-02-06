@@ -11,6 +11,9 @@ withinRange = require('./intro').withinRange
 allAbsValue = require('./intro').allAbsValue
 person = require('./intro').person
 onlyPositive = require('./intro').onlyPositive
+sumArray = require('./intro').sumArray
+sumPartArray = require('./intro').sumPartArray
+sumAll = require('./intro').sumAll
 
 describe "testing add2", ->
   it "should return 42", ->
@@ -66,3 +69,22 @@ describe "Testing person object", ->
   it "should return name: mary, city: morris", ->
     assert.deepEqual(person('Mary','Morris'), {name: 'Mary', city: 'Morris'})
 
+describe "Testing sum loop", ->
+  it "should return 11", ->
+    assert.equal(sumArray([1, 2, 3, 5]), 11)
+
+describe "Testing sum part array", ->
+  it "should return 5", ->
+    assert.equal(sumPartArray([1, 2, 3, 5], 1, 2), 5)
+
+describe "Testing sum splat", ->
+  it "should return 6", ->
+    assert.equal(sumAll(1,2,3), 6)
+
+describe "Testing sum splat", ->
+  it "should return 10", ->
+    assert.equal(sumAll(1,2,3,4), 10)
+
+describe "Testing sum splat", ->
+  it "should return 5", ->
+    assert.equal(sumAll(5), 5)
